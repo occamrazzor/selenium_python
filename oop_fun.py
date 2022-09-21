@@ -3,6 +3,7 @@
 class Calculator:
     num = 100   #Class variable accessible withn any method in the Class and constant across object
                 # and needs to be called within the class using class name eg. Calculator.num or self.num
+                # Fields: Data attached to an object
 
 
     def __init__(self, a, b): # Constructor is called first and the name is __init__
@@ -19,7 +20,7 @@ class Calculator:
 
 
 
-obj1 = Calculator(3, 4) #syntax to create an object from the class
+obj1 = Calculator(3, 4) #syntax to create an object from the class, an instance of the class
 obj1.getData()
 print(obj1.Summation())
 

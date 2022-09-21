@@ -1,5 +1,5 @@
-occam
-razor
-python
-selenium
 automation
+selenium
+python
+razor
+occam

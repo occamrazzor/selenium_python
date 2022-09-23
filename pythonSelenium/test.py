@@ -1,5 +1,5 @@
 options = webdriver.ChromeOptions()
-options.add_experimental_option('excludeSwitches', ['enable-logging'])
+options.add_experimental_option("excludeSwitches", ["enable-logging"])
 driver = webdriver.Chrome(options=options)
-driver.get('https://something.com/login')
+driver.get("https://something.com/login")
 driver.maximize_window()

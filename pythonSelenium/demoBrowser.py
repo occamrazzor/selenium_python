@@ -1,8 +1,9 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-#from selenium.webdriver.firefox.service import Service
 
-#chrome driver is a proxy driver
+# from selenium.webdriver.firefox.service import Service
+
+# chrome driver is a proxy driver
 # Create service object
 
 # Chrome Driver
@@ -10,18 +11,18 @@ from selenium.webdriver.chrome.service import Service
 driver = webdriver.Chrome(service = service_obj) """
 
 # Microsoft Edge Driver
-service_obj = Service('C:/Drivers/msedgedriver.exe')
-driver = webdriver.Edge(service = service_obj)
+service_obj = Service("C:/Drivers/msedgedriver.exe")
+driver = webdriver.Edge(service=service_obj)
 
 # Firefox Driver
 """ service_obj = Service('C:/Drivers/geckodriver.exe')
 driver = webdriver.Firefox(service = service_obj) """
 
 driver.maximize_window()
-driver.get('https://rahulshettyacademy.com')
+driver.get("https://rahulshettyacademy.com")
 print(driver.title)
 print(driver.current_url)
-driver.get('https://rahulshettyacademy.com/seleniumPractise/#/')
+driver.get("https://rahulshettyacademy.com/seleniumPractise/#/")
 driver.back()
 driver.refresh()
 driver.forward()

@@ -7,15 +7,15 @@ from selenium.webdriver.chrome.service import Service
 # Create service object
 
 # Chrome Driver
-""" service_obj = Service('C:/Drivers/chromedriver.exe')
+""" service_obj = Service('C:/Webdrivers/chromedriver.exe')
 driver = webdriver.Chrome(service = service_obj) """
 
 # Microsoft Edge Driver
-service_obj = Service("C:/Drivers/msedgedriver.exe")
+service_obj = Service("C:/Webdrivers/msedgedriver.exe")
 driver = webdriver.Edge(service=service_obj)
 
 # Firefox Driver
-""" service_obj = Service('C:/Drivers/geckodriver.exe')
+""" service_obj = Service('C:/Webdrivers/geckodriver.exe')
 driver = webdriver.Firefox(service = service_obj) """
 
 driver.maximize_window()

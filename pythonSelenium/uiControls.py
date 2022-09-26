@@ -5,7 +5,8 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
 options_obj = webdriver.ChromeOptions()
-options_obj.add_experimental_option("excludeSwitches", ["enable-logging"])
+#options_obj.add_experimental_option("excludeSwitches", ["enable-logging"])
+options_obj.add_argument("--disable-web-security")
 
 service_obj = Service("c:/Webdrivers/chromedriver.exe")
 driver = webdriver.Chrome(service=service_obj, options=options_obj)

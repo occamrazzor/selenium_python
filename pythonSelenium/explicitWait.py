@@ -11,8 +11,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 options = Options()
 options.add_argument("--disable-web-security")
 # chrome_options.add_argument("--disable-site-isolation-trials")
-options.add_experimental_option("excludeSwitches", ["enable-logging"])
-service_obj = Service("c:/Webdrivers/chromedriver.exe")
+#options.add_experimental_option("excludeSwitches", ["enable-logging"])
+service_obj = Service('c:/Webdrivers/chromedriver.exe')
 driver = webdriver.Chrome(service=service_obj, options=options)
 driver.implicitly_wait(5) # This timeout is applied globally and wait will be over the moment the element appear.
 driver.get("https://www.rahulshettyacademy.com/seleniumPractise/#/")

@@ -13,12 +13,22 @@
 # Fixtures will run setup before test and after test pre-requisite.
 # Passing argument of fixture function name to another function see test_t2.py
 # any task below yield will be executed last. Example of teardown method.
+# You can skip test with @pytest.mark.skip
+# @pytest.mark.xfail
+# fixtures are used as setup and tear down methods for test cases- conftest file to generalize fixture
+# and make it available to all test cases
+
 
 import pytest
 
+@pytest.fixture()
+def setup():
+    print("This is executed first due to pytest fixture()")
+    yield
+    print('I will be executed last')
 
 @pytest.mark.smoke
-def test_firstProgram():
+def test_firstProgram(setup):
     print('Occam')
 
 @pytest.mark.xfail

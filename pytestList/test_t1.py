@@ -17,9 +17,16 @@
 # @pytest.mark.xfail
 # fixtures are used as setup and tear down methods for test cases- conftest file to generalize fixture
 # and make it available to all test cases
+# datadriven and parameterization can be done with return statements in tuple format
+#  when you define fixture scope to class only, it will run once before clss is initiated at the end
+# after all the class methods are executed.
+# pip install pytest-html
+# pytest --html=report.html
+
 
 
 import pytest
+
 
 @pytest.fixture()
 def setup():
@@ -27,10 +34,17 @@ def setup():
     yield
     print('I will be executed last')
 
+
 @pytest.mark.smoke
 def test_firstProgram(setup):
     print('Occam')
 
+
 @pytest.mark.xfail
 def test_SecondGreetCreditCard():
     print('Good Morning')
+
+
+# Note: self is not required in the parameter because its not wrapped in a class eg. in test_fixtureDemo.py
+def test_crossBrowser(crossBrowser):
+    print(crossBrowser)
